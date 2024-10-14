@@ -1,5 +1,5 @@
 {
-    "name": "mattbehan/gaussian-splats-3d",
+    "name": "@mattbehan/gaussian-splats-3d",
     "repository": {
         "type": "git",
         "url": "https://github.com/mattbehan/GaussianSplats3D"

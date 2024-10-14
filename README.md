@@ -123,7 +123,7 @@ The demo scene data is available here: [https://projects.markkellogg.org/downloa
 ## Installing as an NPM package
 If you don't want to build the library from source, it is also available as an NPM package. The NPM package does not come with the source code or demos that are available in the source repository. To install, run the following command:
 ```
-npm install mattbehan/gaussian-splats-3d
+npm install @mattbehan/gaussian-splats-3d
 ```
 
 <br>
@@ -133,7 +133,7 @@ npm install mattbehan/gaussian-splats-3d
 To run the built-in viewer:
 
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 
 const viewer = new GaussianSplats3D.Viewer({
     'cameraUp': [0, -1, -0.6],
@@ -179,7 +179,7 @@ Parameters for `addSplatScene()`
 
 `Viewer` can also load multiple scenes simultaneously with the `addSplatScenes()` function:
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 
 viewer.addSplatScenes([{
         'path': '<path to first .ply, .ksplat, or .splat file>',
@@ -204,7 +204,7 @@ The `addSplatScene()` and `addSplatScenes()` methods will accept the original `.
 ### Integrating THREE.js scenes
 You can integrate your own Three.js scene into the viewer if you want rendering to be handled for you. Just pass a Three.js scene object as the `threeScene` parameter to the constructor:
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 import * as THREE from 'three';
 
 const threeScene = new THREE.Scene();
@@ -228,7 +228,7 @@ Currently this will only work for objects that write to the depth buffer (e.g. s
 
 A "drop-in" mode for the viewer is also supported. The `DropInViewer` class encapsulates `Viewer` and can be added to a Three.js scene like any other renderable:
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 import * as THREE from 'three';
 
 const threeScene = new THREE.Scene();
@@ -255,7 +255,7 @@ threeScene.add(viewer);
 The viewer allows for various levels of customization via constructor parameters. You can control when its `update()` and `render()` methods are called by passing `false` for the `selfDrivenMode` parameter and then calling those methods whenever/wherever you decide is appropriate. You can also use your own camera controls, as well as an your own instance of a Three.js `Renderer` or `Camera` The sample below shows all of these options:
 
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 import * as THREE from 'three';
 
 const renderWidth = 800;
@@ -349,7 +349,7 @@ Advanced `Viewer` parameters
 To convert a `.ply` or `.splat` file into the stripped-down and compressed `.ksplat` format, there are several options. The easiest method is to use the UI in the main demo page at [http://127.0.0.1:8080/index.html](http://127.0.0.1:8080/index.html). If you want to run the conversion programatically, run the following in a browser:
 
 ```javascript
-import * as GaussianSplats3D from 'mattbehan/gaussian-splats-3d';
+import * as GaussianSplats3D from '@mattbehan/gaussian-splats-3d';
 
 const compressionLevel = 1;
 const splatAlphaRemovalThreshold = 5; // out of 255
